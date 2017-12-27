@@ -1,0 +1,26 @@
+/* components/movieGroup/movieGroup.wxss */
+
+.movie-group-container {
+  background-color: #fff;
+  margin-bottom: 15px;
+}
+.movie-group-title-container{
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+  padding: 20rpx;
+}
+.movie-group-title {
+  font-size: 30rpx;
+}
+.more-movies{
+  font-size: 30rpx;
+  font-family: '微软雅黑';
+  color: blue;
+}
+.movie-wrapper {
+  margin-top: 10rpx;
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}

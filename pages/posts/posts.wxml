@@ -1,0 +1,27 @@
+<!-- // 引用模板文件 这里也可以用绝对路径 -->
+<import src="post-item/post-item-template.wxml" />
+
+<!-- 设置布尔值为false时要加上双大括号 -->
+<swiper indicator-dots="{{indicatorDots}}" vertical="{{false}}" autoplay="{{autoplay}}" interval="{{interval}}" duration="{{duration}}" catchtap='onSwiperTap'>
+  <block wx:for="{{imgUrls}}" wx:key="index">
+    <swiper-item>
+      <image src="{{item}}" class="slide-image" />
+    </swiper-item>
+  </block>
+</swiper>
+<!-- 文章列表 -->
+<!-- 水平用rpx， 垂直上用px -->
+
+<!-- 模板引用 -->
+<block wx:for="{{posts_key}}" wx:for-item="item" wx:for-index="index" wx:key="index">
+  <!-- item 要加上双括号还有'...' 事件不能加在template上 -->
+  <!-- 自定义属性 data-postId-->
+  <!-- 不能用onPostTap(item.postId)传递id-->
+  <!-- postId变成postid -->
+  <view catchtap="onPostTap" data-postId="{{item.postId}}">
+    <template is="postItem" data="{{...item}}" />
+  </view>
+</block>
+
+<!-- 组件使用  组件的名字必须和components组件名一致-->
+<!-- <post-list post-list="{{posts_key}}"></post-list> -->

@@ -1,0 +1,11 @@
+
+/* flex 布局对scroll-view组件无效 */
+.more-movies-container{
+  padding-left: 6rpx;
+  height: auto;
+   /* 必须设置高度才能触发加载更多 
+  height: 100vh; */
+}
+.more-movies-wrapper {
+  float: left;
+}

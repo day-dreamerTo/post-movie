@@ -1,0 +1,14 @@
+/* components/movie/movie.wxss */
+.movie-container{
+  display: flex;
+  flex-direction: column;
+  padding: 10rpx 22rpx; 
+}
+.movie-cover{
+  width: 205rpx;
+  height: 270rpx;
+  padding-bottom: 20rpx;
+}
+.movie-name{
+  font-size: 24rpx;
+}

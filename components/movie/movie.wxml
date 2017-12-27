@@ -1,0 +1,6 @@
+<!--components/movie/movie.wxml-->
+<view class="movie-container" catchtap='onMovieTap'>
+  <image class="movie-cover" src="{{movie.images.small}}"></image>
+  <text class="movie-name">{{movie.title}}</text>
+  <star score="{{movie.rating.average}}"></star>
+</view>

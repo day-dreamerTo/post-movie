@@ -1,0 +1,8 @@
+<!-- <scroll-view scroll-y="true" scroll-x="false" bindscrolltolower="onScrollLower" lower-threshold="60" "> -->
+<view class="more-movies-container">
+  <view class=" more-movies-wrapper " wx:for="{{topMovies.subjects}} " wx:key="index ">
+    <movie movie="{{item}} "></movie>
+  </view>
+</view>
+<view class="up-bar " wx:if="{{showUpBar}} ">加载更多</view>
+<!-- </scroll-view> -->

@@ -1,0 +1,6 @@
+{
+  "navigationBarTitleText": "电影",
+  "usingComponents": {
+    "movie-group": "/components/movie-group/movie-group"
+  } 
+}

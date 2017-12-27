@@ -1,0 +1,6 @@
+{
+  "navigationBarTitleText": "文章",
+  "usingComponents": {
+    "post-list": "/components/post-list/post-list"
+  }
+}
