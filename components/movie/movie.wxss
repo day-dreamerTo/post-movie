@@ -10,5 +10,9 @@
   padding-bottom: 20rpx;
 }
 .movie-name{
+  width: 200rpx;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  overflow: hidden;
   font-size: 24rpx;
 }

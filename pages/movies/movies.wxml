@@ -1,3 +1,4 @@
+
 <view class="movies-container">
   <movie-group top-movies="{{topMovies}}"></movie-group>
   <movie-group top-movies="{{theaterMovies}}"></movie-group>

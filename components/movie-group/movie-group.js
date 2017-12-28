@@ -18,9 +18,9 @@ Component({
   },
   methods: {
     onMoreTap() {
-      app.globalData.movieSet = this.data.topMovies;
+      // app.globalData.movieSet = this.data.topMovies;
       wx.navigateTo({
-        url: '/pages/movies/more-movies/more-movies',
+        url: '/pages/movies/more-movies/more-movies?title=' + this.data.topMovies.title,
       })
     }
   }

@@ -2,6 +2,7 @@
 .movies-container{
   
 }
+/* "backgroundColor": "red" 配置的是下拉刷新的时候上面空出来的背景色 */
 page {
   height: 100%;
   background-color: #f8f8f8;
