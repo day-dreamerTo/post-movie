@@ -2,7 +2,7 @@ Page({
   onTap() {
     // 不能加.wxml
     wx.switchTab({
-      url: "../posts/post"
+      url: "../posts/posts"
     });
     // 同级页面之间的跳转
     // wx.redirectTo({

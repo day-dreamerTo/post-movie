@@ -1,6 +1,5 @@
 const app = getApp()
 let fetch = (option) => {
-  console.log(option)
   // wx.showLoading({ title: 'Loading...' });
   return new Promise((resolve, reject) => {
     wx.request({

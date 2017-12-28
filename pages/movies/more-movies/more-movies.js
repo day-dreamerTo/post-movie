@@ -84,7 +84,8 @@ Page({
     fetch({ url: this.data.url }).then((res) => {
       this.setData({
         topMovies: res.data.subjects
-      })
+      });
+      wx.stopPullDownRefresh();
     })
   },
 
