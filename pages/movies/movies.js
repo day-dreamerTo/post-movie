@@ -5,7 +5,13 @@ Page({
   data: {
     topMovies: {},
     theaterMovies: {},
-    count: 0
+    count: 0,
+    key: '',
+    hasResult: false,
+    searchTotal: 0,
+    isSearching: false,
+    isShowClear: false,
+    searchMovies: []
   },
   onLoad: function (options) {
     let _this = this;
@@ -65,5 +71,44 @@ Page({
         wx.hideLoading();
       }
     })
+  },
+  onConfirm(event) {
+    wx.showLoading({
+      title: 'loading...',
+    });
+    let key = event.detail.value;
+    let search_url = '/v2/movie/search?&q=';
+    fetch({ url: search_url + key}).then((res) => {
+      console.log(res);
+      this.setData({
+        searchMovies: res.data.subjects,
+        searchTotal: res.data.total,
+        hasResult: true
+      });
+    });
+  },
+  onFocus(event) {
+    this.setData({ isSearching: true });
+  },
+  onInput(event) {
+    let key = event.detail.value;
+    this.setData({key});
+    if(!key) {
+      this.setData({isShowClear: false});
+    } else {
+      this.setData({ isShowClear: true });
+    }
+  },
+  onBlur(event) {
+   
+  },
+  onClear() {
+    this.setData({
+      isSearching: false,
+      key: '',
+      searchMovies: [],
+      searchTotal: 0,
+      hasResult: false
+    });
   }
 })

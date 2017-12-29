@@ -4,20 +4,34 @@
   background-color: #fff;
   margin-bottom: 15px;
 }
-.movie-group-title-container{
+
+.movie-group-title-container {
   display: flex;
   justify-content: space-between;
   align-items: baseline;
   padding: 20rpx;
 }
+
 .movie-group-title {
   font-size: 30rpx;
 }
-.more-movies{
-  font-size: 30rpx;
+
+.more-movies__text {
+  display: inline-block;
+  vertical-align: middle;
+  margin-right: 20rpx;
+  color: #183694;
+  font-size: 25rpx;
   font-family: '微软雅黑';
-  color: blue;
 }
+
+.more-movies__arrow {
+  width: 10rpx;
+  height: 25rpx;
+  display: inline-block;
+  vertical-align: middle;
+}
+
 .movie-wrapper {
   margin-top: 10rpx;
   display: flex;

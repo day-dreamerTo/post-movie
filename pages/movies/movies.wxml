@@ -1,5 +1,20 @@
-
 <view class="movies-container">
+  <view class="search-container">
+    <icon class="search-icon" type="search" size="15" />
+    <input class="search-input" type="text" value="{{key}}" bindinput="onInput" bindconfirm="onConfirm" bindblur="onBlur" bindfocus="onFocus" placeholder="西游伏妖、羞羞的铁拳" />
+    <view class="search-icon__clear" bindtap="onClear">
+      <icon wx:if="{{isShowClear}}" type="clear"  size="15"></icon>
+    </view>
+    <!-- 搜索 -->
+    <view hidden="{{!isSearching}}" class="search-result-container">
+      <view class="search-movie__result" wx:if="{{hasResult}}">
+         为你搜到了<text class="search-movie__result__num">{{searchTotal}}</text>条数据!
+      </view>
+      <view class="search-movie-wrapper" wx:for="{{searchMovies}}" wx:key="index">
+        <movie movie="{{item}}"></movie>
+      </view>
+    </view>
+  </view>
   <movie-group top-movies="{{topMovies}}"></movie-group>
   <movie-group top-movies="{{theaterMovies}}"></movie-group>
 </view>

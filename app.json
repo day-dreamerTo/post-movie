@@ -1,7 +1,7 @@
 {
   "pages": [
-    "pages/welcome/welcome",
     "pages/movies/movies",
+    "pages/welcome/welcome",
     "pages/posts/posts",
     "pages/posts/post-detail/post-detail",
     "pages/movies/more-movies/more-movies",
@@ -12,6 +12,7 @@
   },
   "tabBar": {
     "borderStyle": "white",
+    "selectedColor": "#183694",
     "backgroundColor": "#fff",
     "list": [
       {

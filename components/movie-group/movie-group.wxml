@@ -2,7 +2,10 @@
   <view class="movie-group-container">
     <view class="movie-group-title-container">
     <text class="movie-group-title">{{topMovies.title}}</text>
-    <text class="more-movies" bindtap="onMoreTap">更多</text>
+    <view class="more-movies-container">
+      <text class="more-movies__text" bindtap="onMoreTap">更多</text>
+      <image class="more-movies__arrow" src="/images/icon/arrow-right.png"></image>
+    </view>
     </view>
     <view class='movie-wrapper'>
       <movie wx:for="{{topThree}}" wx:key="index" movie="{{item}}"></movie>
