@@ -105,6 +105,7 @@ Page({
   onClear() {
     this.setData({
       isSearching: false,
+      isShowClear: false,
       key: '',
       searchMovies: [],
       searchTotal: 0,
